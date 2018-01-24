@@ -7,7 +7,10 @@ const jwt = require('jsonwebtoken');
 var rahul=require('./models/genre')
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost:27017/mean_demo');
+//mongoose.connect('mongodb://localhost:27017/mean_demo');
+
+mongoose.connect('mongodb://mean_user:abc123@$@ds215388.mlab.com:15388/mean_demo');
+
 var db = mongoose.connection;
 
 app.get('/',function(req,res){
